@@ -1,0 +1,35 @@
+<div class="landing-page-container">
+    <div class="content-container">
+        <app-navbar></app-navbar>
+        <div class="featured-movie">
+    
+            <div class="featured-title">
+                {{ featuredMovie.title }}
+            </div>
+
+            <div class="featured-details">
+                <span>
+                    <mat-icon> star </mat-icon> {{ featuredMovie.rating }}
+                </span>
+                <span>
+                    <mat-icon class="small"> fiber_manual_record </mat-icon> {{ featuredMovie.released.split(" ")[2] }}
+                </span>
+                <span> | </span>
+                <span> {{ featuredMovie.duration }} </span>
+                <span> | </span>
+                <span> {{ featuredMovie.genre }} </span>
+            </div>
+
+            <div class="featured-description">
+                {{ featuredMovie.description }}
+            </div>
+
+            <div class="featured-actions">
+                <button class="trailer"> Watch trailer </button>
+                <button class="watchlist">
+                    <mat-icon> add </mat-icon> Add to watchlist
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

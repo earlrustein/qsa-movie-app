@@ -1,0 +1,22 @@
+<div class="navbar-container">
+    <div class="branding">
+        <div class="brand-name-one"> QST </div>
+    </div>
+
+    <div class="navbar-menu">
+        <ul>
+            <ng-container *ngFor="let menu of menus" class="menu-item">
+                <li> 
+                    <a 
+                        [routerLink]="menu.path"
+                        [routerLinkActive]="'active-link'"
+                    > 
+                        {{ menu.name }} 
+                    </a>
+                </li>
+            </ng-container>
+            <li> | </li>
+            <li> <mat-icon> search </mat-icon> </li>
+        </ul>
+    </div>
+</div>
